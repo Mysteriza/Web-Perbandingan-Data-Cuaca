@@ -2,6 +2,9 @@
 
 A simple weather comparison application that allows users to compare the current weather data from multiple weather APIs, including OpenWeatherMap, WeatherAPI, and AccuWeather.
 
+## Screenshot
+![image](https://github.com/user-attachments/assets/f88556f6-020c-48d8-9886-a774cc1dd6f5)
+
 ## Features
 
 - Compare weather data from three different weather services:
@@ -36,7 +39,4 @@ A simple weather comparison application that allows users to compare the current
 
 ## Contributing
 Feel free to fork the repository, make improvements, and submit pull requests. Contributions are always welcome!
-
-## Screenshot
-![image](https://github.com/user-attachments/assets/f88556f6-020c-48d8-9886-a774cc1dd6f5)
 

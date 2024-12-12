@@ -82,23 +82,24 @@ async function getWeatherAccuWeather(city) {
 }
 
 // Fungsi untuk memuat ulang semua data cuaca
-function refreshWeatherData(city = "Bandung") {
+function refreshWeatherData() {
+  const city = document.getElementById("city-input").value || "Bandung"; // Ambil kota dari input
   getWeatherOpenWeatherMap(city);
   getWeatherWeatherAPI(city);
   getWeatherAccuWeather(city);
 }
 
-// Panggil fungsi refresh ketika halaman pertama kali dimuat
-refreshWeatherData();
-
-// Tambahkan event listener untuk tombol refresh
+// Panggil fungsi refresh ketika tombol refresh ditekan
 document.getElementById("refresh-btn").addEventListener("click", () => {
-  const city = document.getElementById("city-input").value || "Bandung";
-  refreshWeatherData(city);
+  refreshWeatherData(); // Tidak perlu mengirimkan parameter kota, karena sudah diambil dari input
 });
 
 // Event listener untuk tombol search
 document.getElementById("search-btn").addEventListener("click", () => {
-  const city = document.getElementById("city-input").value || "Bandung";
-  refreshWeatherData(city);
+  refreshWeatherData(); // Tidak perlu mengirimkan parameter kota, karena sudah diambil dari input
+});
+
+// Panggil fungsi refresh ketika halaman pertama kali dimuat (gunakan default atau input yang ada)
+document.addEventListener("DOMContentLoaded", () => {
+  refreshWeatherData(); // Memastikan data cuaca dimuat saat halaman pertama kali dimuat
 });
